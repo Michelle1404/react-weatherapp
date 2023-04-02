@@ -1,0 +1,156 @@
+:root {
+  --section-overlay: rgba(0, 0, 0, 0.7);
+  --background-overlay: rgba(0, 0, 0, 0, 0.2);
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+
+.app {
+  width: 100%;
+  height: 100vh;
+  background-position: center;
+  background-size: cover;
+}
+
+.overlay {
+  width: 100%;
+  height: 100vh;
+  background-color: var(--background-overlay);
+}
+
+.container {
+  max-width: 800px;
+  margin: auto;
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-direction: column;
+  padding: 1rem;
+}
+
+/* top */
+
+.section {
+  width: 100%;
+  padding: 1rem;
+  border-radius: 0.4rem;
+  color: white;
+}
+
+.towns {
+  width: 100%;
+  display: grid;
+  grid-template-columns: repeat(6, 1fr);
+  gap: 2.5rem;
+  margin-bottom: 10px;
+  background-color: var(--section-overlay);
+  color: white;
+  padding: 1rem;
+  border-radius: 0.4rem;
+}
+
+.townNames {
+  padding: 5px 5px;
+  border: none;
+  border-radius: 00.4rem;
+  font-size: 16px;
+  font-weight: 500;
+  background-color: white;
+  cursor: pointer;
+}
+
+.sectionInputs,
+.sectionTemperature {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  background-color: var(--section-overlay);
+}
+
+.sectionTemperature {
+  margin-top: 20px;
+}
+
+.sectionInputs > input {
+  border: 0.8px solid white;
+  border-radius: 0.4rem;
+  background-color: transparent;
+  color: white;
+  padding: 0.5rem;
+  font-size: 20px;
+  font-weight: 200;
+}
+
+.sectionInputs > input:focus {
+  outline: none;
+}
+
+.sectionInputs > button {
+  padding: 10px 50px;
+  border: none;
+  border-radius: 00.4rem;
+  font-size: 20px;
+  font-weight: 500;
+  background-color: white;
+}
+
+.sectionInputs > button:hover {
+  cursor: pointer;
+  background-color: lightgray;
+}
+
+.icon {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.icon > h3 {
+  font-size: 15px;
+  font-weight: 200;
+  text-transform: capitalize;
+}
+
+.temperature > h1 {
+  font-size: 60px;
+}
+
+@media screen and (max-width: 1024px) {
+  .btnContainer {
+    display: flex;
+    flex-wrap: wrap;
+  }
+}
+@media screen and (max-width: 600px) {
+  .btnContainer {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    align-items: center;
+  }
+  .btnButton {
+    display: flex;
+    flex-direction: column;
+  }
+  .towns {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+@media screen and (max-width: 477px) {
+  .btnButton {
+    margin-top: 10px;
+  }
+  .btnContainer {
+    margin-bottom: 20px;
+  }
+  .towns {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
